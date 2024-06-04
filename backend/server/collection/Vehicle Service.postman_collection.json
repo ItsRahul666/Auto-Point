@@ -1,0 +1,2226 @@
+{
+	"info": {
+		"_postman_id": "e1d46da0-397b-4f28-96b5-54a3dcef94ed",
+		"name": "Vehicle Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13530824"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}user/login",
+									"host": [
+										"{{baseUrl}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "mechanic",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/all",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/single",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/changeStatus",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"changeStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}customer/all",
+									"host": [
+										"{{baseUrl}}customer"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443adf865722a1059bffbb4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}customer/single",
+									"host": [
+										"{{baseUrl}}customer"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443b7b0e9430ae2008b9b82",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}customer/changeStatus",
+									"host": [
+										"{{baseUrl}}customer"
+									],
+									"path": [
+										"changeStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/all",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644636daad3152a63952b67a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/single",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/all",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccccd87e0037b6848445",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/single",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "vehicle-type",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "vehicleType one",
+											"type": "text"
+										},
+										{
+											"key": "vehicleType_image",
+											"type": "file",
+											"src": "/C:/Users/Dell/Downloads/projectlist2.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/add",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "vehicle one",
+											"type": "text"
+										},
+										{
+											"key": "vehicleType_image",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "_id",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/update",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/changeStatus",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"changeStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/all",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/single",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "feedback",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}feedback/all",
+									"host": [
+										"{{baseUrl}}feedback"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64463ce866091dac4fbbd338",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}feedback/single",
+									"host": [
+										"{{baseUrl}}feedback"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/contact/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644399b660f745d1ff7688f6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contact/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}dashboard",
+							"host": [
+								"{{baseUrl}}dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mechanic",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "mechanicone@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}user/login",
+									"host": [
+										"{{baseUrl}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/single",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstName",
+											"value": "mechanic",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "one",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "address of mechanic 1",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "city of mechanic 1",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "state of mechanic 2",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mechanic1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "speciality",
+											"value": "special",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "mechanic_image",
+											"type": "file",
+											"src": "/C:/Users/Dell/Downloads/projectlist2.png"
+										},
+										{
+											"key": "vehicleTypeId",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/add",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstName",
+											"value": "mechanic",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "address of mechanic 1",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "city of mechanic 1",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "state of mechanic 1",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "1234567891",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mechanicone@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "speciality",
+											"value": "speciality",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test1",
+											"type": "text"
+										},
+										{
+											"key": "mechanic_image",
+											"type": "file",
+											"src": "/C:/Users/Dell/Downloads/issues.png"
+										},
+										{
+											"key": "vehicleTypeId",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/update",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "vehicle-type",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/all",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/single",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mechanicId",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/all",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644636daad3152a63952b67a",
+											"type": "text"
+										},
+										{
+											"key": "bookingStatus",
+											"value": "in-progress",
+											"description": "in-progress or completed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/booking/changeStatus",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"booking",
+										"changeStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644636daad3152a63952b67a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/single",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "service1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "try 1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "service_image",
+											"type": "file",
+											"src": "/C:/Users/Dell/Downloads/projectlist.png"
+										},
+										{
+											"key": "vehicleTypeId",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										},
+										{
+											"key": "mechanicId",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/add",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "serviceone",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "try 1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "550",
+											"type": "text"
+										},
+										{
+											"key": "service_image",
+											"type": "file",
+											"src": "/C:/Users/Dell/Downloads/kid.jpg"
+										},
+										{
+											"key": "_id",
+											"value": "6443ccccd87e0037b6848445",
+											"type": "text"
+										},
+										{
+											"key": "mechanicId",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										},
+										{
+											"key": "vehicleTypeId",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/update",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccccd87e0037b6848445",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/changeStatus",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"changeStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "mechanicId",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/all",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccccd87e0037b6848445",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/single",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}dashboard",
+							"host": [
+								"{{baseUrl}}dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "two",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "address of customer 2",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "city of customer 2",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "state of customer 2",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "1234567891",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "customer2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}customer/add",
+									"host": [
+										"{{baseUrl}}customer"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/single",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "two",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "test adress of customer 1",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "test city of customer 1",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "test state of customer 1",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "customer2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6443adf865722a1059bffbb4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}customer/update",
+									"host": [
+										"{{baseUrl}}customer"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "customer2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}user/login",
+									"host": [
+										"{{baseUrl}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "mechanicId",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "vehicleTypeId",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/all",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccccd87e0037b6848445",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}service/single",
+									"host": [
+										"{{baseUrl}}service"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "vehicle-type",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/all",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}vehicleType/single",
+									"host": [
+										"{{baseUrl}}vehicleType"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "6443adf865722a1059bffbb4",
+											"description": "for booking history of customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/all",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644636daad3152a63952b67a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/single",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "6443adf865722a1059bffbb4",
+											"type": "text"
+										},
+										{
+											"key": "serviceId",
+											"value": "6443ccccd87e0037b6848445",
+											"type": "text"
+										},
+										{
+											"key": "vehicleTypeId",
+											"value": "644394bbf36736e9cdacc006",
+											"type": "text"
+										},
+										{
+											"key": "appointmentTime",
+											"value": "19:30",
+											"type": "text"
+										},
+										{
+											"key": "appointmentDate",
+											"value": "2023-04-03",
+											"type": "text"
+										},
+										{
+											"key": "vehicleNumber",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "modelName",
+											"value": "try",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "400",
+											"type": "text"
+										},
+										{
+											"key": "instruction",
+											"value": "test ",
+											"type": "text"
+										},
+										{
+											"key": "firstName",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "try",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "customer1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "city",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "state",
+											"type": "text"
+										},
+										{
+											"key": "mechanicId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/add",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel booking",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644636daad3152a63952b67a",
+											"type": "text"
+										},
+										{
+											"key": "bookingStatus",
+											"value": "canceled",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}booking/changeStatus",
+									"host": [
+										"{{baseUrl}}booking"
+									],
+									"path": [
+										"changeStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "feedback",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "6443adf865722a1059bffbb4",
+											"description": "for booking history of customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}feedback/all",
+									"host": [
+										"{{baseUrl}}feedback"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64463ce866091dac4fbbd338",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}feedback/single",
+									"host": [
+										"{{baseUrl}}feedback"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "6443adf865722a1059bffbb4",
+											"type": "text"
+										},
+										{
+											"key": "bookingId",
+											"value": "644636daad3152a63952b67a",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "very good",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}feedback/add",
+									"host": [
+										"{{baseUrl}}feedback"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "demo",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "demo@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "demo subject",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "demo message",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contact/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "mechanic",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/all",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443c60e1c6527c68a63dcb9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}mechanic/single",
+									"host": [
+										"{{baseUrl}}mechanic"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
